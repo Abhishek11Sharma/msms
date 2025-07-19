@@ -1,6 +1,5 @@
 package com.msms.msms.models;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -11,12 +10,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Clients extends DateAudit {
-    
+public class Address {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    @Column(unique = true)
-    private String clientId;
-    private String clientName;
+    private Long addId;
+    private String address1;
+    private String address2;
+    private Integer cityId;
+    private Integer stateId;
+    private String pincode;
 }
